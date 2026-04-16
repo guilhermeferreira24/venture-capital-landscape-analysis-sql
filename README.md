@@ -154,7 +154,7 @@ ORDER BY year DESC, num_unicorns DESC;
 ## What I Learned
 
 - **CTEs make complex problems readable** — breaking the query into `top_industries` → `yearly_rankings` made each step clear and easy to debug
-  **CTE (Common Table Expression)** — a temporary, named result set created with the `WITH` keyword that acts as a building block for the main query, making complex SQL easier to read and debug.
+- **CTE (Common Table Expression)** is a temporary, named result set created with the `WITH` keyword that acts as a building block for the main query, making complex SQL easier to read and debug.
 - **Order of operations matters in SQL** — I had to identify the top 3 industries *first* before filtering the yearly breakdown, which is where CTEs shine
 - **JOINs don't carry over between CTEs** — each CTE queries the original tables independently
 - **Valuation conversion in PostgreSQL** — `ROUND(AVG(f.valuation / 1e9)::NUMERIC, 2)` was a useful pattern to handle decimal precision cleanly
