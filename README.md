@@ -150,6 +150,22 @@ ORDER BY year DESC, num_unicorns DESC;
 - **pandas** — DataFrame output for DataCamp DataLab validation
 - **DataCamp DataLab** — project environment
 
+---
+
+## What I Learned
+
+- **CTEs make complex problems readable** — breaking the query into `top_industries` → `yearly_rankings` made each step clear and easy to debug
+- **Order of operations matters in SQL** — I had to identify the top 3 industries *first* before filtering the yearly breakdown, which is where CTEs shine
+- **JOINs don't carry over between CTEs** — each CTE queries the original tables independently
+- **Valuation conversion in PostgreSQL** — `ROUND(AVG(f.valuation / 1e9)::NUMERIC, 2)` was a useful pattern to handle decimal precision cleanly
+
+---
+
+## What I Would Recommend
+
+- **Fintech** — highest growth (20 → 138 unicorns) but declining valuations suggest a crowded market; focus on early-stage companies before they reach unicorn status
+- **Internet software & services** — most consistent across all three years; the safest long-term holding in the portfolio
+- **E-commerce** — strong 2021 numbers driven by pandemic tailwinds; worth monitoring whether momentum held post-2021 before increasing exposure
 ***
 
 ## Source
